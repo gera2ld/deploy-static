@@ -1,6 +1,10 @@
 deploy-static
 ===
 
+![NPM](https://img.shields.io/npm/v/deploy-static.svg)
+![License](https://img.shields.io/npm/l/deploy-static.svg)
+![Downloads](https://img.shields.io/npm/dt/deploy-static.svg)
+
 This is a command built with Node.js to facilitate deployment of static
 files.
 
