@@ -1,0 +1,22 @@
+{
+  "name": "deploy-static",
+  "version": "0.0.0",
+  "description": "Deploy static files with a static.json file",
+  "main": "index.js",
+  "bin": {
+    "deploy-static": "bin/deploy.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "static",
+    "deploy"
+  ],
+  "author": "Gerald <i@gerald.top>",
+  "license": "MIT",
+  "dependencies": {
+    "argparse": "^1.0.7",
+    "ensure-dir": "^0.1.0"
+  }
+}
