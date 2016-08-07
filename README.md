@@ -37,7 +37,7 @@ be both absolute or relative paths.
 Then deploy your static files with the command below.
 
 ``` sh
-$ deploy-static -s static.json -d dist -t v1.0 -p http://my.storage.com/
+$ deploy-static fetch static.json -d dist -t v1.0 -p http://my.storage.com/
 ```
 
 The latest version will be linked to `dist/current` while the history
@@ -49,20 +49,35 @@ assigned. `static.json` is also an `url`, either absolute or relative.
 Documents
 ---
 
+* deploy-static fetch
+
 ```
-usage: static-deploy [-h] [-v] [-s STATIC] [-d DIST] [-t TAG] [-p PREFIX] [-S]
+usage: deploy-static fetch [-h] [-t TAG] [-f] [-p PREFIX] [-S] [static]
+
+Positional arguments:
+  static                the URL or path of static.json, stdin will be read if
+                        none is provided
 
 Optional arguments:
   -h, --help            Show this help message and exit.
-  -v, --version         Show program's version number and exit.
-  -s STATIC, --static STATIC
-                        the URL or path of static.json
-  -d DIST, --dist DIST  the directory to hold the static files
   -t TAG, --tag TAG     the tag of current version, will be used as the
-                        subdirectory name
+                        subdirectory name, default as current date
+  -f, --force           whether to overwrite files if tag exists
   -p PREFIX, --prefix PREFIX
                         the URL prefix for all items with relative paths
   -S, --save-static     whether to store the static.json file
+```
+
+* deploy-static link
+
+```
+usage: deploy-static link [-h] tag
+
+Positional arguments:
+  tag         the tag or folder name of the version to be linked
+
+Optional arguments:
+  -h, --help  Show this help message and exit.
 ```
 
 ![deploy-static](resources/deploy-static.jpg)
