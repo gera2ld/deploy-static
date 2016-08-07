@@ -62,7 +62,7 @@ Optional arguments:
   -h, --help            Show this help message and exit.
   -t TAG, --tag TAG     the tag of current version, will be used as the
                         subdirectory name, default as current date
-  -f, --force           whether to overwrite files if tag exists
+  -f, --force           whether to reuse files in an existed tag
   -p PREFIX, --prefix PREFIX
                         the URL prefix for all items with relative paths
   -S, --save-static     whether to store the static.json file
