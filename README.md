@@ -44,10 +44,11 @@ After that you will get a `dist` directory with structure like this:
 
 ```
 ▾ dist/
-  ▸ v0.8/
-  ▸ v0.9/
-  ▸ v1.0/                 # Just fetched version
-  ▸ current/ -> v1.0/     # symlink to current version
+  ▸ current/ -> versions/v1.0/     # symlink to current version
+  ▸ versions/
+    ▸ v0.8/
+    ▸ v0.9/
+    ▸ v1.0/                        # latest version
 ```
 
 The latest version will be linked to `dist/current` while the history
