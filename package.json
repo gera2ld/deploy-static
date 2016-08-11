@@ -1,6 +1,6 @@
 {
   "name": "deploy-static",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Deploy static files with a static.json file",
   "main": "index.js",
   "bin": {
