@@ -51,7 +51,7 @@ After that you will get a `dist` directory with structure like this:
 ```
 
 The latest version will be linked to `dist/current` while the history
-versions are kept in `dist` so that you can easily rollback.
+versions are kept in `dist/versions` so that you can easily rollback.
 
 Note that if the `url` is relative, the `prefix` parameter must be
 assigned. `static.json` is also an `url`, either absolute or relative.
