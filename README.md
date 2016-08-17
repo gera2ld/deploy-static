@@ -37,13 +37,13 @@ be both absolute or relative paths.
 Then deploy your static files with the command below.
 
 ``` sh
-$ deploy-static fetch static.json -d dist -t v1.0 -p http://my.storage.com/
+$ deploy-static fetch static.json -t v1.0 -p http://my.storage.com/
 ```
 
-After that you will get a `dist` directory with structure like this:
+After that you will get directory architecture like this:
 
 ```
-▾ dist/
+▾ ./
   ▸ current/ -> versions/v1.0/     # symlink to current version
   ▸ versions/
     ▸ v0.8/
@@ -51,8 +51,8 @@ After that you will get a `dist` directory with structure like this:
     ▸ v1.0/                        # latest version
 ```
 
-The latest version will be linked to `dist/current` while the history
-versions are kept in `dist/versions` so that you can easily rollback.
+The latest version will be linked to `./current` while the history
+versions are kept in `./versions` so that you can easily rollback.
 
 Note that if the `url` is relative, the `prefix` parameter must be
 assigned. `static.json` is also an `url`, either absolute or relative.
@@ -63,7 +63,7 @@ Documents
 * deploy-static fetch
 
 ```
-usage: deploy-static fetch [-h] [-t TAG] [-f] [-p PREFIX] [-S] [static]
+usage: deploy-static fetch [-h] [-d DIST] [-t TAG] [-f] [-p PREFIX] [-S] [static]
 
 Positional arguments:
   static                the URL or path of static.json, stdin will be read if
@@ -71,6 +71,7 @@ Positional arguments:
 
 Optional arguments:
   -h, --help            Show this help message and exit.
+  -d DIST, --dist DIST  the directory to hold the static files
   -t TAG, --tag TAG     the tag of current version, will be used as the
                         subdirectory name, default as current date
   -f, --force           whether to reuse files in an existed tag
@@ -82,13 +83,14 @@ Optional arguments:
 * deploy-static link
 
 ```
-usage: deploy-static link [-h] tag
+usage: deploy-static link [-h] [-d DIST] tag
 
 Positional arguments:
   tag         the tag or folder name of the version to be linked
 
 Optional arguments:
   -h, --help  Show this help message and exit.
+  -d DIST, --dist DIST  the directory to hold the static files
 ```
 
 ![deploy-static](resources/deploy-static.jpg)
