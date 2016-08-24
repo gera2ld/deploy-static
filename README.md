@@ -11,7 +11,7 @@ files.
 Installation
 ---
 ``` sh
-$ npm i deploy-static
+$ npm i deploy-static -g
 ```
 
 Usage
