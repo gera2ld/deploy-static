@@ -93,4 +93,24 @@ Optional arguments:
   -d DIST, --dist DIST  the directory to hold the static files
 ```
 
+* deploy-static clean
+
+```
+usage: deploy-static clean [-h] [-d DIST] [-t TAG [TAG ...]] [-n NUMBER]
+                           [-k KEEP] [-N]
+
+
+Optional arguments:
+  -h, --help            Show this help message and exit.
+  -d DIST, --dist DIST  the directory to hold the static files
+  -t TAG [TAG ...], --tag TAG [TAG ...]
+                        Remove obsolete versions by tags.
+  -n NUMBER, --number NUMBER
+                        Remove the first NUMBER of obsolete versions. If
+                        value not provided, the first one will be removed.
+  -k KEEP, --keep KEEP  Remove obsolete versions and keep last KEEP ones. If
+                        value not provided, the last 5 will be kept.
+  -N, --dry             Show versions to be cleaned and exit.
+```
+
 ![deploy-static](resources/deploy-static.jpg)
