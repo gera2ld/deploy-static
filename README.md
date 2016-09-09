@@ -109,7 +109,7 @@ Optional arguments:
                         Remove the first NUMBER of obsolete versions. If
                         value not provided, the first one will be removed.
   -k KEEP, --keep KEEP  Remove obsolete versions and keep last KEEP ones. If
-                        value not provided, the last 5 will be kept.
+                        value not provided, the last 4 will be kept.
   -N, --dry             Show versions to be cleaned and exit.
 ```
 
