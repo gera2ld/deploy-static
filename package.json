@@ -7,6 +7,7 @@
     "deploy-static": "bin/deploy.js"
   },
   "scripts": {
+    "lint": "eslint lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,5 +19,8 @@
   "dependencies": {
     "argparse": "^1.0.7",
     "ensure-dir": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.6.1"
   }
 }
