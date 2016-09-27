@@ -19,20 +19,24 @@ Usage
 Before deployment, you should upload your static files somewhere and
 build a list in `static.json`.
 
-`static.json` is like this:
+`static.json` may be an array of `{url, path}` items, or an object with
+a `files` property containing such an array.
 
 ``` json
-[{
-  "url": "http://my.storage.com/assets/app.js",
-  "path": "assets/app.js"
-}, {
-  "url": "assets/app.css",
-  "path": "assets/app.css"
-}]
+{
+  "version": "v1.0",
+  "files": [{
+    "url": "http://my.storage.com/assets/app.js",
+    "path": "assets/app.js"
+  }, {
+    "url": "assets/app.css",
+    "path": "assets/app.css"
+  }]
+}
 ```
 
-Each item has an `url` to fetch and local `path` to store. `url`s can
-be both absolute or relative paths.
+Each item has a remote `url` and local `path` mapping. `url`s can be
+both absolute or relative paths.
 
 Then deploy your static files with the command below.
 
