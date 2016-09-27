@@ -67,7 +67,8 @@ Documents
 * deploy-static fetch
 
 ```
-usage: deploy-static fetch [-h] [-d DIST] [-t TAG] [-f] [-p PREFIX] [-S] [static]
+usage: deploy-static fetch [-h] [-d DIST] [-V] [-t TAG] [-f] [-p PREFIX] [-S]
+                           static
 
 Positional arguments:
   static                the URL or path of static.json, stdin will be read if
@@ -76,6 +77,7 @@ Positional arguments:
 Optional arguments:
   -h, --help            Show this help message and exit.
   -d DIST, --dist DIST  the directory to hold the static files
+  -V, --verbose         Show verbose log.
   -t TAG, --tag TAG     the tag of current version, will be used as the
                         subdirectory name, default as current date
   -f, --force           whether to reuse files in an existed tag
@@ -95,6 +97,7 @@ Positional arguments:
 Optional arguments:
   -h, --help  Show this help message and exit.
   -d DIST, --dist DIST  the directory to hold the static files
+  -V, --verbose         Show verbose log.
 ```
 
 * deploy-static clean
@@ -107,6 +110,7 @@ usage: deploy-static clean [-h] [-d DIST] [-t TAG [TAG ...]] [-n NUMBER]
 Optional arguments:
   -h, --help            Show this help message and exit.
   -d DIST, --dist DIST  the directory to hold the static files
+  -V, --verbose         Show verbose log.
   -t TAG [TAG ...], --tag TAG [TAG ...]
                         Remove obsolete versions by tags.
   -n NUMBER, --number NUMBER
