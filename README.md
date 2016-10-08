@@ -36,7 +36,7 @@ a `files` property containing such an array.
 ```
 
 Each item has a remote `url` and local `path` mapping. `url`s can be
-both absolute or relative paths.
+either absolute or relative paths.
 
 Then deploy your static files with the command below.
 
@@ -80,7 +80,7 @@ Optional arguments:
   -V, --verbose         Show verbose log.
   -t TAG, --tag TAG     the tag of current version, will be used as the
                         subdirectory name, default as current date
-  -f, --force           whether to reuse files in an existed tag
+  -f, --force           Force download existed files
   -p PREFIX, --prefix PREFIX
                         the URL prefix for all items with relative paths
   -S, --save-static     whether to store the static.json file
